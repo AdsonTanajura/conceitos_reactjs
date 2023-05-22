@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 
+import backgroundImage from './assets/back.jpg';
+
+import './App.css';
 import Header from './Components/Header';
 import Amor from './Components/Amor';
 import Header2 from './Components/Header2';
+
 
 function App() {
   const [projects, setProjects] = useState(['Projeto Casa','Projeto Familia','Projeto Trabalho' ]);
@@ -21,7 +25,11 @@ function App() {
 
     return (
     <>
-          <Header2 project="PROJETO PRINCIPAL"/>
+          
+          <Header2 project="PROJETO PRINCIPAL" />
+
+          
+
             <ul>
               {projects.map(project => <li key={project}>{project}</li>)}
             </ul>
@@ -41,6 +49,8 @@ function App() {
             </ul>
           
             <button type="button" onClick={handleAddProject2}>Adicionar Projeto</button>
+          
+            <img width={2000} src={backgroundImage} /> 
           
     </>
   )
